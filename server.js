@@ -41,7 +41,6 @@ app.get('/:key', function(req,res){
             key: key
         }).toArray(function(err,data){
             if (err) throw err;
-            
             var curr_url = data[0]["url"];
             //console.log(curr_url);
             res.redirect(curr_url);
