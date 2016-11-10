@@ -26,13 +26,13 @@ app.get("/new/:url(*)", function(req,res){
             {key: obj.key}, obj, {upsert: true});
         db.close();
     });
-    var short_url = (req.protocol+'://' + req.headers.host +'/' + obj.key);
+    var short_url = (req.protocol + '://' + req.headers.host +'/' + obj.key);
     res.json(
         {original_url: user_url,
         short_url: short_url});
 });
 
-app.get('/:key', function(req,res){
+app.get('/:key(*)', function(req,res){
     var key = req.params.key;
     mongo.connect(url, function(err, db){
         if (err) throw err;
