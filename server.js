@@ -1,7 +1,7 @@
 var express = require("express");
 var helper = require("./helper.js");
 var mongo = require("mongodb").MongoClient;
-var url = 'mongodb://localhost:27017/url';
+var url = process.env.MONGOLAB_URI;
 var app = express();
 
 var LENGTH = 6;
