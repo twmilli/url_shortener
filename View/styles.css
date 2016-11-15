@@ -1,0 +1,17 @@
+body{
+    background-color: #C63D0F;
+    color: #3B3738;
+}
+
+a{
+    color: #7E8F7C;
+}
+.text{
+    background-color: #FDF3E7;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+

@@ -1,17 +1,15 @@
 var express = require("express");
 var helper = require("./helper.js");
 var mongo = require("mongodb").MongoClient;
-var url = process.env.MONGOLAB_URI;
+var url = process.env.MONGODB_URI;
 var app = express();
-
-var LENGTH = 6;
 
 app.use(express.static(__dirname + '/View'));
 app.use(express.static(__dirname + '/Script'));
 app.set('port', (process.env.PORT || 8080));
 
 app.get('/favicon.ico', function(req, res) {
-    res.send(200);
+    res.sendStatus(200);
 });
 
 app.get("/", function(req, res){
@@ -45,9 +43,7 @@ app.get('/:tag(*)', function(req,res){
             key: tag
         }).toArray(function(err,data){
             if (err) throw err;
-            console.log(data);
             var curr_url = data[0]["url"];
-            //console.log(curr_url);
             res.redirect(curr_url);
             db.close();
         });
