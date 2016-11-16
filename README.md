@@ -2,6 +2,7 @@
 
 Project to learn node js <br />
 * shortens urls (would work better if domain name I deployed it on was short)
+* generates a unique hash for each url using md5
 * utilizes a mongodb deployed on mlab to store URL hashes <br/>
 * deployed on heroku: https://secure-crag-25604.herokuapp.com/ <br/>
 
