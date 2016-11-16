@@ -8,7 +8,6 @@ Project to learn node js <br />
 Example Usage: <br/> <br/>
 
 https://secure-crag-25604.herokuapp.com/new/http://www.foo.com <br/>
-https://secure-crag-25604.herokuapp.com/new/http://www.google.com <br />
+https://secure-crag-25604.herokuapp.com/new/http://www.google.com <br /><br/>
 Example creation output: <br/>
-
 { "original_url": "http://www.google.com", "short_url": "http://secure-crag-25604.herokuapp.com/7WRqMz" }
